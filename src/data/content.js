@@ -20,7 +20,7 @@ export const profile = {
   email: 'elisa.wagner49@gmail.com',
   phone: '07 85 10 07 23',
   phoneLink: 'tel:+33785100723',
-  linkedin: 'https://www.linkedin.com/in/elisa-wagner', // [À confirmer]
+  linkedin: 'https://www.linkedin.com/in/wagnerelisa',
   available: 'Disponible dès septembre 2026',
 }
 
