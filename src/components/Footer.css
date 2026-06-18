@@ -1,0 +1,71 @@
+.footer {
+  position: relative;
+  z-index: 1;
+  padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  margin-top: 2rem;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px dashed rgba(169, 159, 179, 0.3);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer__badge {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blush), var(--lavender));
+  font-family: var(--font-head);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.footer__brand strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+}
+
+.footer__role {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.footer__top {
+  font-family: var(--font-head);
+  font-weight: 500;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--shadow-soft);
+  color: var(--ink);
+  transition: transform 0.25s ease;
+}
+
+.footer__top:hover {
+  transform: translateY(-3px);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}

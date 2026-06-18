@@ -1,0 +1,62 @@
+.blobs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  --px: 0;
+  --py: 0;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+/* Très gros ronds, presque invisibles, couleurs pastel */
+.blob--1 {
+  width: 46vw;
+  height: 46vw;
+  min-width: 380px;
+  min-height: 380px;
+  top: -10vh;
+  left: -8vw;
+  background: radial-gradient(circle at 30% 30%, var(--blush), transparent 70%);
+  animation: drift-a 26s ease-in-out infinite;
+  transform: translate(calc(var(--px) * 26px), calc(var(--py) * 26px));
+}
+
+.blob--2 {
+  width: 52vw;
+  height: 52vw;
+  min-width: 420px;
+  min-height: 420px;
+  top: 20vh;
+  right: -14vw;
+  background: radial-gradient(circle at 60% 40%, var(--lavender), transparent 70%);
+  animation: drift-b 32s ease-in-out infinite;
+  transform: translate(calc(var(--px) * -34px), calc(var(--py) * -20px));
+}
+
+.blob--3 {
+  width: 40vw;
+  height: 40vw;
+  min-width: 340px;
+  min-height: 340px;
+  bottom: -16vh;
+  left: 28vw;
+  background: radial-gradient(circle at 50% 50%, var(--mint), transparent 70%);
+  animation: drift-c 30s ease-in-out infinite;
+  transform: translate(calc(var(--px) * 18px), calc(var(--py) * -28px));
+}
+
+/* Les parallaxes souris sont neutralisés si l'utilisateur préfère
+   réduire les animations (le hook arrête déjà la mise à jour). */
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none !important;
+  }
+}

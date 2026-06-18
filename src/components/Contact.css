@@ -1,0 +1,92 @@
+.contact__banner {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  border-radius: var(--r-xl);
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+  background: linear-gradient(150deg, var(--blush), var(--lavender) 55%, var(--sky));
+  box-shadow: var(--shadow-card);
+}
+
+.contact__emoji {
+  display: inline-block;
+  font-size: 2.4rem;
+  color: var(--surface);
+  margin-bottom: 0.8rem;
+}
+
+.contact__title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(1.8rem, 1.3rem + 2.5vw, 3.2rem);
+  color: var(--ink);
+  max-width: 18ch;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.contact__lead {
+  position: relative;
+  z-index: 1;
+  color: var(--ink);
+  opacity: 0.85;
+  max-width: 52ch;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.contact__actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.contact__btn {
+  background: var(--surface);
+}
+
+.contact__btn.btn--primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+}
+
+.contact__location {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  opacity: 0.8;
+}
+
+/* Gros ronds décoratifs dans la bannière */
+.contact__deco {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  filter: blur(8px);
+}
+
+.contact__deco--1 {
+  width: 200px;
+  height: 200px;
+  top: -70px;
+  left: -50px;
+}
+
+.contact__deco--2 {
+  width: 150px;
+  height: 150px;
+  bottom: -60px;
+  right: -30px;
+}
+
+.contact__deco--3 {
+  width: 90px;
+  height: 90px;
+  top: 30%;
+  right: 12%;
+  background: rgba(255, 255, 255, 0.3);
+}
