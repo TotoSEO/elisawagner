@@ -38,6 +38,12 @@ export default function Contact() {
               </MagneticButton>
               <MagneticButton
                 className="btn btn--ghost contact__btn"
+                href={profile.phoneLink}
+              >
+                ☎ {profile.phone}
+              </MagneticButton>
+              <MagneticButton
+                className="btn btn--ghost contact__btn"
                 href={profile.linkedin}
               >
                 in · LinkedIn

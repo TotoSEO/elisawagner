@@ -1,165 +1,182 @@
 /* ============================================================
-   CONTENU DU SITE — placeholders à remplacer
+   CONTENU DU SITE — Élisa Wagner
    ------------------------------------------------------------
-   Tous les textes du portfolio sont centralisés ici.
-   Les valeurs marquées « [À compléter] » sont fictives :
-   il suffit de les remplacer par les vraies informations
-   d'Élisa (intitulés exacts du MBA, expériences, dates…).
+   Toutes les informations proviennent du CV d'Élisa.
+   Pour mettre à jour le site, il suffit de modifier ce fichier.
+   (Le lien LinkedIn exact reste à confirmer — voir [À confirmer].)
    ============================================================ */
 
 export const profile = {
   firstName: 'Élisa',
   lastName: 'Wagner',
-  role: 'Communication interne',
+  role: 'Communication interne & marque employeur',
   // Accroche principale du hero
-  tagline: 'Je donne une voix aux organisations\net du sens à leurs collaborateurs.',
+  tagline: 'Je crée des contenus et des campagnes\nqui rapprochent les marques de leurs publics.',
   // Sous-titre du hero
   intro:
-    "Spécialiste de la communication interne, j'imagine des stratégies qui rapprochent les équipes, renforcent la marque employeur et accompagnent le changement avec clarté et bienveillance.",
-  location: '[À compléter] · France',
-  email: 'elisa.wagner@example.com', // [À compléter]
-  linkedin: 'https://www.linkedin.com/in/elisa-wagner/', // [À compléter]
-  available: 'Ouverte aux opportunités',
+    "Diplômée d'un MBA Manager de la communication, je conçois des contenus et des campagnes qui donnent du sens, valorisent la marque employeur et fédèrent les collaborateurs. Créative et curieuse, je mêle stratégie, graphisme et vidéo.",
+  photo: 'elisa-wagner.jpg',
+  location: 'Strasbourg · France',
+  email: 'elisa.wagner49@gmail.com',
+  phone: '07 85 10 07 23',
+  phoneLink: 'tel:+33785100723',
+  linkedin: 'https://www.linkedin.com/in/elisa-wagner', // [À confirmer]
+  available: 'Disponible dès septembre 2026',
 }
 
 // Mots-clés du bandeau défilant (marquee)
 export const keywords = [
-  'Engagement',
+  'Communication interne',
   'Marque employeur',
-  'Cohésion',
-  'Conduite du changement',
+  'Création de contenus',
+  'Graphisme',
+  'Vidéo',
+  'Événementiel',
+  'Réseaux sociaux',
   'Storytelling',
-  'Culture d’entreprise',
-  'Communication éditoriale',
-  'Événementiel interne',
-  'Expérience collaborateur',
+  'Gestion de projet',
 ]
 
-// Quelques chiffres-clés (compteurs animés) — [À compléter]
+// Quelques chiffres-clés (compteurs animés)
 export const stats = [
-  { value: 6, suffix: '+', label: "années d'expérience" },
-  { value: 40, suffix: '+', label: 'campagnes internes menées' },
-  { value: 12, suffix: 'k', label: 'collaborateurs touchés' },
+  { value: 2, suffix: ' ans', label: "d'alternance chez Octapharma" },
+  { value: 4, suffix: '', label: 'expériences professionnelles' },
+  { value: 3, suffix: '', label: 'langues (FR · EN · ES)' },
   { value: 1, suffix: '', label: 'MBA en communication' },
 ]
 
 export const about = {
   title: 'Faire de la communication un lien, pas un canal',
   paragraphs: [
-    "Diplômée d'un MBA en communication, j'accompagne les entreprises dans la construction d'un dialogue interne sincère et fédérateur. [À compléter avec la vraie présentation]",
-    "Mon approche mêle stratégie éditoriale, sens du collectif et créativité. Je conçois des dispositifs qui donnent envie de lire, de participer et de s'engager — du quotidien des équipes aux grands moments de transformation.",
+    "À 23 ans, je termine un MBA Manager de la communication à l'ISEG Strasbourg, après deux années d'alternance chez Octapharma. J'y ai mesuré le pouvoir d'une communication interne sincère et d'une marque employeur réellement incarnée.",
+    "Polyvalente, je passe volontiers de la stratégie à la création : rédaction, graphisme, vidéo, événementiel. J'aime imaginer des contenus qui donnent envie de lire, de participer et de s'engager. Je suis disponible dès septembre 2026 pour un poste à temps plein.",
   ],
   highlights: [
-    'Stratégie de communication interne',
-    'Création de contenus & ligne éditoriale',
-    'Accompagnement du changement',
-    'Animation de communautés internes',
+    'Communication interne',
+    'Marque employeur',
+    'Création de contenus print & digital',
+    'Graphisme & vidéo',
   ],
 }
 
 export const skills = [
   {
     icon: '✶',
-    title: 'Stratégie interne',
-    text: 'Définition de la vision, des messages clés et des plans de communication alignés sur les enjeux de l’organisation.',
+    title: 'Communication interne',
+    text: 'Conception de supports et de dispositifs qui informent, rassemblent et engagent les collaborateurs.',
   },
   {
     icon: '✦',
     title: 'Marque employeur',
-    text: 'Valorisation de la culture d’entreprise pour attirer, engager et fidéliser les talents.',
+    text: 'Participation au pilotage de campagnes média pour valoriser l’entreprise, ses métiers et attirer les talents.',
   },
   {
     icon: '❖',
-    title: 'Stratégie éditoriale',
-    text: 'Newsletters, intranet, réseaux internes : une ligne éditoriale claire, vivante et incarnée.',
+    title: 'Création de contenus',
+    text: 'Contenus print et digitaux : flyers, stickers, posts LinkedIn & Instagram, articles, newsletters.',
   },
   {
     icon: '✸',
-    title: 'Conduite du changement',
-    text: 'Accompagnement des transformations par une communication pédagogique et rassurante.',
+    title: 'Création graphique',
+    text: 'Supports visuels variés — roll-up, habillage de camions, identités — sur la suite Adobe.',
   },
   {
     icon: '✿',
-    title: 'Événementiel interne',
-    text: 'Conception de moments fédérateurs : conventions, séminaires, célébrations d’équipe.',
+    title: 'Contenu vidéo',
+    text: 'Tournage et montage de vidéos sur Adobe Premiere Pro, du brief à la diffusion.',
   },
   {
     icon: '✺',
-    title: 'Communication digitale',
-    text: 'Animation des canaux internes et création de formats engageants (vidéo, motion, social).',
+    title: 'Gestion de projet & événementiel',
+    text: 'Pilotage de projets et organisation d’événements, du concept à la coordination sur le terrain.',
   },
 ]
 
 export const experiences = [
   {
-    period: '2022 — Aujourd’hui',
-    role: 'Responsable communication interne',
-    company: '[Entreprise — À compléter]',
+    period: 'Sept. 2024 — Août 2026',
+    role: 'Chargée de communication (alternance)',
+    company: 'Octapharma',
     description:
-      "Pilotage de la stratégie de communication interne et de la marque employeur. [Détails à compléter avec les vraies missions et résultats.]",
-    tags: ['Stratégie', 'Marque employeur', 'Management'],
+      "Création de contenus print et digitaux, création graphique (roll-up, habillage de camions), participation au pilotage d'une campagne média de marque employeur, rédaction (articles, posts LinkedIn), réalisation de contenus vidéo (tournage et montage sur Premiere Pro), événementiel et gestion de projet.",
+    tags: ['Marque employeur', 'Contenus', 'Vidéo', 'Événementiel'],
   },
   {
-    period: '2019 — 2022',
-    role: 'Chargée de communication',
-    company: '[Entreprise — À compléter]',
+    period: 'Mai — Juillet 2024',
+    role: 'Chargée de communication interne (stage)',
+    company: 'Kairos',
     description:
-      "Conception et déploiement de campagnes internes, animation de l'intranet et des newsletters. [Détails à compléter.]",
-    tags: ['Éditorial', 'Intranet', 'Campagnes'],
+      'Création de supports de communication interne pour informer et fédérer les équipes.',
+    tags: ['Communication interne', 'Supports'],
   },
   {
-    period: '2017 — 2019',
-    role: 'Assistante communication',
-    company: '[Entreprise — À compléter]',
+    period: 'Mai — Juillet 2023',
+    role: 'Chargée de communication (stage)',
+    company: 'Les Bijoux de Marilou',
     description:
-      "Soutien aux actions de communication et organisation d'événements internes. [Détails à compléter.]",
-    tags: ['Événementiel', 'Contenus'],
+      'Création de contenus (posts Instagram), gestion de plannings, assemblage et gravure de bijoux, préparation de commandes.',
+    tags: ['Réseaux sociaux', 'Contenus'],
+  },
+  {
+    period: 'Juillet — Août 2022',
+    role: 'Assistante gestion locative (stage)',
+    company: 'Foncia',
+    description:
+      'Réalisation de documents administratifs, gestion locative et démarches téléphoniques.',
+    tags: ['Administratif', 'Relation client'],
   },
 ]
 
 export const education = [
   {
-    period: '[Année] — [Année]',
-    degree: 'MBA en Communication',
-    school: '[École / Université — À compléter]',
+    period: '2024 — 2026',
+    degree: 'MBA — Manager de la communication',
+    school: 'ISEG Strasbourg',
     description:
-      "Spécialisation en stratégie de communication et management de la marque. [Intitulé exact et mention à compléter.]",
+      'Management de la communication : stratégie, marque, pilotage de projets et création de contenus.',
   },
   {
-    period: '[Année] — [Année]',
-    degree: 'Licence / Bachelor en Communication',
-    school: '[École / Université — À compléter]',
-    description: 'Fondamentaux de la communication, du marketing et des médias. [À compléter.]',
+    period: '2021 — 2024',
+    degree: 'Bachelor Communication & Marketing',
+    school: 'ISEG Strasbourg',
+    description:
+      'Fondamentaux de la communication, du marketing et de la création de contenus.',
+  },
+  {
+    period: '2018 — 2021',
+    degree: 'Baccalauréat général',
+    school: 'Lycée St Joseph — La Pommeraye',
+    description: 'Spécialités Histoire et Économie, mention européenne.',
   },
 ]
 
 export const projects = [
   {
-    title: 'Refonte de l’intranet collaboratif',
-    category: 'Communication digitale',
+    title: 'Campagne média marque employeur',
+    category: 'Marque employeur',
     description:
-      'Conception d’un nouvel espace interne plus vivant et participatif. [Étude de cas à compléter.]',
+      "Participation au pilotage d'une campagne média pour valoriser Octapharma, ses métiers et ses équipes.",
     color: 'var(--lavender)',
   },
   {
-    title: 'Campagne « Fiers d’ici »',
-    category: 'Marque employeur',
+    title: '« La plus grande tarte flambée du monde »',
+    category: 'Gestion de projet',
     description:
-      'Campagne de valorisation des collaborateurs et de leurs métiers. [Étude de cas à compléter.]',
+      "Cheffe de projet et gestion des réseaux sociaux pour cet événement record organisé avec l'ISEG.",
     color: 'var(--mint)',
   },
   {
-    title: 'Convention annuelle des équipes',
-    category: 'Événementiel interne',
+    title: 'Contenus vidéo de marque',
+    category: 'Vidéo',
     description:
-      'Conception du fil rouge et des prises de parole d’un séminaire fédérateur. [Étude de cas à compléter.]',
+      'Conception, tournage et montage de contenus vidéo sur Adobe Premiere Pro.',
     color: 'var(--peach)',
   },
   {
-    title: 'Accompagnement d’une transformation',
-    category: 'Conduite du changement',
+    title: 'Supports de communication interne',
+    category: 'Communication interne',
     description:
-      'Dispositif de communication pour accompagner un changement d’organisation. [Étude de cas à compléter.]',
+      'Création de supports pour informer et fédérer les équipes en interne.',
     color: 'var(--sky)',
   },
 ]

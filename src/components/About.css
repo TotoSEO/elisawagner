@@ -14,13 +14,17 @@
 }
 
 .about__photo {
-  display: grid;
-  place-items: center;
   aspect-ratio: 4 / 5;
   border-radius: var(--r-lg);
+  overflow: hidden;
   background: linear-gradient(160deg, var(--mint), var(--sky) 60%, var(--lavender));
-  font-size: 4rem;
-  color: rgba(255, 255, 255, 0.9);
+}
+
+.about__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
 }
 
 .about__quote {
