@@ -74,10 +74,11 @@ export default function Hero() {
         >
           <div className="hero__portrait">
             <div className="hero__portrait-blob">
-              <span className="hero__portrait-initials">
-                {profile.firstName[0]}
-                {profile.lastName[0]}
-              </span>
+              <img
+                className="hero__portrait-img"
+                src={`${import.meta.env.BASE_URL}${profile.photo}`}
+                alt={`Portrait d'${profile.firstName} ${profile.lastName}`}
+              />
             </div>
             <motion.span
               className="hero__sticker hero__sticker--1"

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { about } from '../data/content'
+import { about, profile } from '../data/content'
 import Reveal from './ui/Reveal'
 import './About.css'
 
@@ -10,7 +10,10 @@ export default function About() {
         <Reveal className="about__visual">
           <div className="about__card">
             <div className="about__photo">
-              <span>✿</span>
+              <img
+                src={`${import.meta.env.BASE_URL}${profile.photo}`}
+                alt={`${profile.firstName} ${profile.lastName}`}
+              />
             </div>
             <div className="about__quote">
               « La communication interne, c’est l’art de transformer une
