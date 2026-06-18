@@ -1,9 +1,11 @@
 name: Déploiement GitHub Pages
 
 on:
+  # Le déploiement vers GitHub Pages ne se fait que depuis la branche par
+  # défaut (main) : l'environnement github-pages n'autorise pas les
+  # déploiements depuis les autres branches.
   push:
     branches:
-      - claude/elisa-wagner-portfolio-pm9qt5
       - main
   workflow_dispatch:
 
