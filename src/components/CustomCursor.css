@@ -25,8 +25,8 @@
   height: 38px;
   margin-top: -19px;
   margin-left: -19px;
-  border: 2px solid var(--accent);
-  background: rgba(244, 143, 177, 0.08);
+  border: 2px solid var(--lilac);
+  background: rgba(200, 182, 245, 0.1);
   transition: width 0.25s ease, height 0.25s ease, background 0.25s ease,
     border-color 0.25s ease;
 }
@@ -36,8 +36,8 @@
   height: 60px;
   margin-top: -30px;
   margin-left: -30px;
-  background: rgba(205, 193, 240, 0.22);
-  border-color: var(--lavender);
+  background: rgba(255, 134, 194, 0.18);
+  border-color: var(--accent);
 }
 
 .cursor-dot {
@@ -45,5 +45,5 @@
   height: 7px;
   margin-top: -3.5px;
   margin-left: -3.5px;
-  background: var(--accent-deep);
+  background: #fff;
 }

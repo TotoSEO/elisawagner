@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { useIsTouch } from '../hooks/useIsTouch'
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion'
+import Sparkle from './ui/Sparkle'
 import './BackgroundBlobs.css'
 
-// 2-3 très gros ronds pastel, flous et presque invisibles, qui dérivent
-// lentement en arrière-plan. Léger parallaxe au mouvement de la souris.
+// Grands halos violets qui dérivent + quelques étoiles flottantes,
+// avec un léger parallaxe à la souris. Discret, derrière le contenu.
 export default function BackgroundBlobs() {
   const layerRef = useRef(null)
   const isTouch = useIsTouch()
@@ -35,6 +36,10 @@ export default function BackgroundBlobs() {
       <span className="blob blob--1" />
       <span className="blob blob--2" />
       <span className="blob blob--3" />
+      <Sparkle size={26} className="bg-star bg-star--1" />
+      <Sparkle size={16} className="bg-star bg-star--2" />
+      <Sparkle size={34} className="bg-star bg-star--3" />
+      <Sparkle size={18} className="bg-star bg-star--4" />
     </div>
   )
 }
