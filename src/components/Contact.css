@@ -1,34 +1,17 @@
 .contact__banner {
-  position: relative;
-  overflow: hidden;
   text-align: center;
   border-radius: var(--r-xl);
-  padding: clamp(2.8rem, 7vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
-  background:
-    radial-gradient(120% 120% at 20% 0%, rgba(155, 110, 232, 0.5), transparent 60%),
-    radial-gradient(120% 120% at 100% 100%, rgba(255, 134, 194, 0.25), transparent 55%),
-    rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--violet-line);
-  box-shadow: var(--shadow-card);
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 5vw, 4rem);
+  background: var(--panel);
+  border: 1px solid var(--line);
 }
 
 .contact__title {
-  font-size: clamp(2.4rem, 1.6rem + 4vw, 4.5rem);
-  margin-bottom: 0;
-}
-
-.contact__signature {
-  display: block;
-  font-family: var(--font-script);
-  font-size: clamp(2rem, 1.3rem + 3vw, 3.4rem);
-  color: var(--lilac-soft);
-  margin-top: -0.2em;
-  margin-bottom: 1.2rem;
+  font-size: clamp(2rem, 1.4rem + 3vw, 3.4rem);
+  margin-bottom: 1rem;
 }
 
 .contact__lead {
-  position: relative;
-  z-index: 1;
   color: var(--ink-soft);
   max-width: 48ch;
   margin-inline: auto;
@@ -36,37 +19,14 @@
 }
 
 .contact__actions {
-  position: relative;
-  z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  gap: 0.8rem;
   justify-content: center;
 }
 
 .contact__meta {
-  position: relative;
-  z-index: 1;
-  margin-top: 1.6rem;
+  margin-top: 1.5rem;
   font-weight: 500;
   color: var(--ink-muted);
-}
-
-.contact__star {
-  color: #fff;
-  animation: pulse-soft 4s ease-in-out infinite;
-}
-.contact__star--1 {
-  top: 12%;
-  left: 9%;
-}
-.contact__star--2 {
-  top: 22%;
-  right: 12%;
-  animation-delay: 0.7s;
-}
-.contact__star--3 {
-  bottom: 16%;
-  right: 18%;
-  animation-delay: 1.3s;
 }

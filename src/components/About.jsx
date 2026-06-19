@@ -1,6 +1,5 @@
 import { about, profile, languages } from '../data/content'
 import Reveal from './ui/Reveal'
-import Sparkle from './ui/Sparkle'
 import './About.css'
 
 export default function About() {
@@ -23,30 +22,27 @@ export default function About() {
               </div>
             ))}
           </div>
-          <Sparkle size={26} className="about__star" />
         </Reveal>
 
         <div className="about__text">
           <Reveal>
-            <span className="section__eyebrow">
-              <Sparkle size={13} style={{ position: 'static' }} /> À propos
-            </span>
+            <span className="section__eyebrow">À propos</span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="section__title glow-title">{about.title}</h2>
+            <h2 className="section__title">{about.title}</h2>
           </Reveal>
 
           {about.paragraphs.map((p, i) => (
-            <Reveal delay={0.1 + i * 0.08} key={i}>
+            <Reveal delay={0.1 + i * 0.06} key={i}>
               <p className="about__paragraph">{p}</p>
             </Reveal>
           ))}
 
-          <Reveal delay={0.3}>
+          <Reveal delay={0.25}>
             <ul className="about__highlights">
               {about.highlights.map((h) => (
                 <li key={h} className="pill">
-                  <Sparkle size={13} style={{ position: 'static', color: 'var(--accent)' }} /> {h}
+                  {h}
                 </li>
               ))}
             </ul>

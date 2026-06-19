@@ -1,0 +1,11 @@
+/* Dégage l'espace sous la navbar fixe pour la page Contact. */
+.contact-page {
+  padding-top: clamp(5rem, 11vh, 8rem);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-page .contact {
+  width: 100%;
+}
