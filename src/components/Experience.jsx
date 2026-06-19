@@ -2,7 +2,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { experiences, education } from '../data/content'
 import Reveal from './ui/Reveal'
-import Sparkle from './ui/Sparkle'
 import './Experience.css'
 
 export default function Experience() {
@@ -18,12 +17,10 @@ export default function Experience() {
       <div className="container">
         <div className="experience__head">
           <Reveal>
-            <span className="section__eyebrow">
-              <Sparkle size={13} style={{ position: 'static' }} /> Parcours
-            </span>
+            <span className="section__eyebrow">Parcours</span>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="section__title glow-title">Expériences & formation</h2>
+            <h2 className="section__title">Expériences &amp; formation</h2>
           </Reveal>
         </div>
 
@@ -47,9 +44,7 @@ export default function Experience() {
           </div>
 
           <Reveal className="education-block">
-            <h3 className="education-block__title">
-              <Sparkle size={16} style={{ position: 'static' }} /> Formation
-            </h3>
+            <h3 className="education-block__title">Formation</h3>
             {education.map((edu, i) => (
               <div className="education-item" key={i}>
                 <span className="education-item__period">{edu.period}</span>

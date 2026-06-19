@@ -1,14 +1,14 @@
-import { profile } from '../data/content'
+import { Link } from 'react-router-dom'
+import { profile, navLinks } from '../data/content'
 import './Footer.css'
 
 export default function Footer() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
   const year = new Date().getFullYear()
 
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <div className="footer__brand">
+        <Link to="/" className="footer__brand">
           <span className="footer__badge">EW</span>
           <div>
             <strong>
@@ -16,18 +16,22 @@ export default function Footer() {
             </strong>
             <span className="footer__role">{profile.role}</span>
           </div>
-        </div>
+        </Link>
 
-        <button className="footer__top" onClick={scrollTop} data-cursor="hover">
-          Haut de page ↑
-        </button>
+        <nav className="footer__nav" aria-label="Navigation du pied de page">
+          {navLinks.map((l) => (
+            <Link key={l.to} to={l.to}>
+              {l.label}
+            </Link>
+          ))}
+        </nav>
       </div>
 
       <div className="container footer__bottom">
         <span>
-          © {year} {profile.firstName} {profile.lastName} — Tous droits réservés.
+          © {year} {profile.firstName} {profile.lastName}
         </span>
-        <span className="footer__made">Conçu avec soin & beaucoup de rond ✦</span>
+        <a href={`mailto:${profile.email}`}>{profile.email}</a>
       </div>
     </footer>
   )

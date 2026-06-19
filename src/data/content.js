@@ -217,9 +217,8 @@ export const languages = [
 ]
 
 export const navLinks = [
-  { id: 'realisations', label: 'Réalisations' },
-  { id: 'apropos', label: 'À propos' },
-  { id: 'parcours', label: 'Parcours' },
-  { id: 'competences', label: 'Compétences' },
-  { id: 'contact', label: 'Contact' },
+  { to: '/', label: 'Accueil' },
+  { to: '/realisations', label: 'Réalisations' },
+  { to: '/parcours', label: 'Parcours' },
+  { to: '/contact', label: 'Contact' },
 ]

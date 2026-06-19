@@ -1,49 +1,45 @@
 /* ============================================================
-   Design system — Portfolio Élisa Wagner (v2)
-   Univers violet « Octapharma », élégant : serif + script,
-   étoiles scintillantes, réalisations mises en avant.
+   Design system — Portfolio Élisa Wagner (v3, sobre)
+   Violet « Octapharma » plat, sans dégradés, typographie nette.
    ============================================================ */
 
 :root {
-  /* Violets de fond */
-  --bg: #45228c; /* violet principal */
-  --bg-deep: #341a6b; /* violet profond */
-  --bg-darker: #2b1556;
-  --panel: #51299e; /* panneau légèrement plus clair */
-  --panel-2: #5d34b0;
-  --violet-line: rgba(255, 255, 255, 0.16);
+  /* Violets (aplats) */
+  --bg: #3a2168; /* fond principal */
+  --bg-alt: #341d5e; /* sections alternées */
+  --panel: #45287d; /* cartes / panneaux */
+  --panel-2: #4d2e88;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.24);
 
-  /* Accents clairs */
-  --lilac: #c8b6f5;
-  --lilac-soft: #e9e1fb;
-  --accent: #ff86c2; /* rose pop (très ponctuel) */
-  --accent-2: #8be0d8; /* menthe glaciale (ponctuel) */
+  /* Accents clairs (sobres) */
+  --lilac: #c8b6ef;
+  --lilac-soft: #e7defb;
 
-  /* Texte sur violet */
+  /* Texte */
   --ink: #ffffff;
-  --ink-soft: rgba(255, 255, 255, 0.82);
-  --ink-muted: rgba(255, 255, 255, 0.58);
-  --on-light: #3a1d77;
+  --ink-soft: rgba(255, 255, 255, 0.78);
+  --ink-muted: rgba(255, 255, 255, 0.55);
+  --on-light: #34206a;
 
-  /* Rayons */
-  --r-sm: 12px;
-  --r-md: 18px;
-  --r-lg: 26px;
-  --r-xl: 36px;
+  /* Rayons (sobres, modérés) */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
   --r-pill: 999px;
 
-  /* Ombres */
-  --shadow-soft: 0 18px 40px -22px rgba(0, 0, 0, 0.55);
-  --shadow-card: 0 30px 70px -30px rgba(0, 0, 0, 0.65);
+  /* Ombres discrètes */
+  --shadow-soft: 0 10px 30px -18px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 20px 48px -28px rgba(0, 0, 0, 0.7);
 
   /* Typographie */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-script: 'Pinyon Script', cursive;
-  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-head: 'Sora', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
 
   /* Layout */
-  --maxw: 1180px;
-  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --maxw: 1140px;
+  --gutter: clamp(1.25rem, 5vw, 3.5rem);
 }
 
 *,
@@ -62,33 +58,21 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--bg);
-  line-height: 1.7;
-  font-size: clamp(1rem, 0.96rem + 0.25vw, 1.1rem);
+  background: var(--bg); /* aplat, aucun dégradé */
+  line-height: 1.65;
+  font-size: clamp(1rem, 0.97rem + 0.2vw, 1.06rem);
   overflow-x: hidden;
-  position: relative;
-}
-
-/* Dégradé violet global, fixé derrière le contenu */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background:
-    radial-gradient(120% 90% at 15% 0%, #5a32ad 0%, transparent 55%),
-    radial-gradient(120% 90% at 100% 100%, #3a1d77 0%, transparent 55%),
-    linear-gradient(160deg, #4a258f 0%, #38186f 100%);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.005em;
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
 }
 
 a {
@@ -124,66 +108,48 @@ ul {
 /* ---------- Sections ---------- */
 .section {
   position: relative;
-  padding-block: clamp(4rem, 8vw, 7rem);
-  z-index: 1;
+  padding-block: clamp(3.5rem, 7vw, 6rem);
+}
+
+/* Section au fond légèrement distinct (aplat, pas de dégradé) */
+.section--alt {
+  background: var(--bg-alt);
 }
 
 .section__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-body);
+  display: inline-block;
+  font-family: var(--font-head);
   font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--lilac);
-  padding: 0.5rem 1.1rem;
-  border: 1px solid var(--violet-line);
-  border-radius: var(--r-pill);
-  background: rgba(255, 255, 255, 0.05);
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 
-/* Titres de section : serif élégant, blanc, léger halo chromatique */
 .section__title {
-  font-size: clamp(2.1rem, 1.4rem + 3vw, 3.8rem);
-  margin-bottom: 1rem;
-  max-width: 18ch;
+  font-size: clamp(1.8rem, 1.3rem + 2.2vw, 2.9rem);
+  margin-bottom: 0.9rem;
+  max-width: 20ch;
 }
 
 .section__lead {
   color: var(--ink-soft);
-  max-width: 56ch;
-  font-size: clamp(1.02rem, 0.98rem + 0.35vw, 1.2rem);
+  max-width: 58ch;
+  font-size: clamp(1rem, 0.97rem + 0.3vw, 1.12rem);
 }
 
-/* Halo chromatique façon portfolio (titres clairs) */
-.glow-title {
-  text-shadow: 2px 0 14px rgba(139, 224, 216, 0.35),
-    -2px 0 14px rgba(255, 134, 194, 0.35);
-}
-
-/* ---------- Étoiles scintillantes ---------- */
-.sparkle {
-  position: absolute;
-  color: #fff;
-  pointer-events: none;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
-  opacity: 0.9;
-}
-
-/* ---------- Pilules / tags ---------- */
+/* ---------- Tags / pills ---------- */
 .pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1.05rem;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
   border-radius: var(--r-pill);
   font-weight: 500;
-  font-size: 0.92rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid var(--violet-line);
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
   color: var(--ink);
 }
 
@@ -192,21 +158,20 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
-  padding: 0.95rem 1.9rem;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
   border-radius: var(--r-pill);
-  font-family: var(--font-body);
+  font-family: var(--font-head);
   font-weight: 600;
-  font-size: 1rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease,
-    color 0.25s ease;
+  font-size: 0.98rem;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
   will-change: transform;
 }
 
 .btn--primary {
   background: #fff;
   color: var(--on-light);
-  box-shadow: 0 16px 36px -14px rgba(255, 255, 255, 0.5);
 }
 
 .btn--primary:hover {
@@ -214,21 +179,20 @@ ul {
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
+  background: transparent;
   color: #fff;
-  border: 1px solid var(--violet-line);
+  border: 1px solid var(--line-strong);
 }
 
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- Cartes / panneaux ---------- */
+/* ---------- Panneau ---------- */
 .panel {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--violet-line);
+  background: var(--panel);
+  border: 1px solid var(--line);
   border-radius: var(--r-xl);
-  box-shadow: var(--shadow-card);
 }
 
 /* ---------- Utilitaires ---------- */
@@ -245,8 +209,8 @@ ul {
 }
 
 ::selection {
-  background: var(--accent);
-  color: #fff;
+  background: var(--lilac);
+  color: var(--on-light);
 }
 
 @media (prefers-reduced-motion: reduce) {

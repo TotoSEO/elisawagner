@@ -1,17 +1,17 @@
 .footer {
-  position: relative;
-  z-index: 1;
   padding-block: clamp(2.5rem, 5vw, 3.5rem);
+  border-top: 1px solid var(--line);
+  background: var(--bg-alt);
 }
 
 .footer__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--violet-line);
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .footer__brand {
@@ -23,39 +23,40 @@
 .footer__badge {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--lilac), #9b6ee8);
-  font-family: var(--font-display);
-  font-weight: 800;
+  background: var(--lilac);
+  font-family: var(--font-head);
+  font-weight: 700;
   color: var(--on-light);
 }
 
 .footer__brand strong {
   display: block;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-family: var(--font-head);
+  font-size: 1.05rem;
 }
 
 .footer__role {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   color: var(--ink-muted);
 }
 
-.footer__top {
-  font-weight: 500;
-  padding: 0.7rem 1.4rem;
-  border-radius: var(--r-pill);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--violet-line);
-  color: #fff;
-  transition: transform 0.25s ease, background 0.25s ease;
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
 }
 
-.footer__top:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.12);
+.footer__nav a {
+  color: var(--ink-soft);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer__nav a:hover {
+  color: #fff;
 }
 
 .footer__bottom {
@@ -67,4 +68,8 @@
   margin-top: 1.3rem;
   font-size: 0.88rem;
   color: var(--ink-muted);
+}
+
+.footer__bottom a:hover {
+  color: #fff;
 }

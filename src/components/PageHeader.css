@@ -1,0 +1,16 @@
+.page-header {
+  padding-top: clamp(7.5rem, 16vh, 11rem);
+  padding-bottom: clamp(1.5rem, 4vw, 3rem);
+}
+
+.page-header__title {
+  font-size: clamp(2.2rem, 1.5rem + 3vw, 3.6rem);
+  margin-bottom: 1rem;
+  max-width: 18ch;
+}
+
+.page-header__lead {
+  color: var(--ink-soft);
+  max-width: 58ch;
+  font-size: clamp(1.02rem, 0.98rem + 0.35vw, 1.2rem);
+}

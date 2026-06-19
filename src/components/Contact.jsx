@@ -1,7 +1,6 @@
 import { profile } from '../data/content'
 import MagneticButton from './ui/MagneticButton'
 import Reveal from './ui/Reveal'
-import Sparkle from './ui/Sparkle'
 import './Contact.css'
 
 export default function Contact() {
@@ -10,18 +9,11 @@ export default function Contact() {
       <div className="container">
         <Reveal>
           <div className="contact__banner">
-            <Sparkle size={42} className="contact__star contact__star--1" />
-            <Sparkle size={26} className="contact__star contact__star--2" />
-            <Sparkle size={32} className="contact__star contact__star--3" />
-
-            <h2 className="contact__title glow-title">On fait équipe ?</h2>
-            <span className="contact__signature">
-              {profile.firstName} {profile.lastName}
-            </span>
-
+            <span className="section__eyebrow">Contact</span>
+            <h2 className="contact__title">On fait équipe ?</h2>
             <p className="contact__lead">
               Disponible dès septembre 2026 pour donner vie à votre communication
-              interne et à votre marque employeur. Discutons-en !
+              interne et à votre marque employeur. Écrivez-moi, je vous réponds vite.
             </p>
 
             <div className="contact__actions">
