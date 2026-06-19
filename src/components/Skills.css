@@ -3,66 +3,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: clamp(2.2rem, 4vw, 3rem);
 }
 
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(1rem, 2.5vw, 1.6rem);
+.skills__cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-.skill-card {
-  height: 100%;
-  background: var(--surface);
-  border-radius: var(--r-lg);
-  padding: clamp(1.5rem, 3vw, 2.1rem);
-  box-shadow: var(--shadow-soft);
-  transition: box-shadow 0.3s ease;
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--violet-line);
+  font-weight: 500;
+  font-size: clamp(0.95rem, 0.9rem + 0.3vw, 1.1rem);
+  transition: background 0.25s ease, border-color 0.25s ease;
+  cursor: default;
 }
 
-.skill-card:hover {
-  box-shadow: var(--shadow-card);
-}
-
-.skill-card__icon {
-  display: grid;
-  place-items: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  font-size: 1.6rem;
-  background: linear-gradient(140deg, var(--blush), var(--lavender));
-  color: var(--surface);
-  margin-bottom: 1.1rem;
-}
-
-.skill-card:nth-child(3n + 2) .skill-card__icon {
-  background: linear-gradient(140deg, var(--mint), var(--sky));
-}
-
-.skill-card:nth-child(3n) .skill-card__icon {
-  background: linear-gradient(140deg, var(--peach), var(--butter));
-}
-
-.skill-card__title {
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
-}
-
-.skill-card__text {
-  color: var(--ink-soft);
-  font-size: 0.98rem;
-}
-
-@media (max-width: 900px) {
-  .skills__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 560px) {
-  .skills__grid {
-    grid-template-columns: 1fr;
-  }
+.skill-chip:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
 }
